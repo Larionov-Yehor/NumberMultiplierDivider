@@ -11,30 +11,38 @@ public class MultiplierDivider {
 
         List<Integer> result = new ArrayList<>();
 
+        int divider= 2;
 
         if (number == 1 ) {
             result.add(number);
+            return result;
         }
 
-        else if(checkIfTheNumberIsPime(number)){
+        if(checkIfTheNumberIsPime(number)){
             result.add(number);
+            return result;
         }
 
-        else if(number%Math.sqrt(number)==0){
+        /*if(number%Math.sqrt(number)==0){
             result.add((int)Math.sqrt(number));
             result.add((int)Math.sqrt(number));
-        }
+        }*/
 
-        else if(number%2==0){
-            int numberToAddToResult =number;
-            do {
-                result.add(numberToAddToResult%2);
 
-            }while (checkIfTheNumberIsPime(numberToAddToResult));
-        }
+            do{
+                if(number%divider==0){
+
+                    number=number/divider;
+                    result.add(divider);
+
+                }
+                else {
+                    divider=divider+1;
+                }
+            }while (number>=divider);
+
 
         return result;
-
 
     }
 

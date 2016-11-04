@@ -6,6 +6,7 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.hamcrest.core.IsEqual.equalTo;
+import static org.hamcrest.Matchers.contains;
 
 /**
  * Created by employee on 11/4/16.
@@ -15,12 +16,7 @@ public class testMultiplierDivider {
     @Test
     public void chekOutputForNumberOne(){
 
-        List<Integer> actual = MultiplierDivider.getMultipliersForNumber(1);
-
-        List<Integer> expected = new ArrayList<>();
-        expected.add(1);
-
-        assertThat(actual,equalTo(expected));
+        assertThat(MultiplierDivider.getMultipliersForNumber(1),contains(1));
     }
 
     @Test
@@ -78,6 +74,15 @@ public class testMultiplierDivider {
         expected.add(11);
 
         assertThat(actual,equalTo(expected));
+    }
+
+    @Test
+    public void chekOutputForNumber100(){
+
+        List<Integer> actual = MultiplierDivider.getMultipliersForNumber(100);
+
+
+        assertThat(MultiplierDivider.getMultipliersForNumber(2*2*5*5),contains(2,2,5,5));
     }
 
 
