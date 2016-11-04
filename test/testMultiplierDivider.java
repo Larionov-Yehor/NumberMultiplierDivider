@@ -76,6 +76,8 @@ public class testMultiplierDivider {
         assertThat(actual,equalTo(expected));
     }
 
+
+
     @Test
     public void chekOutputForNumber100(){
 
@@ -85,6 +87,17 @@ public class testMultiplierDivider {
         assertThat(MultiplierDivider.getMultipliersForNumber(2*2*5*5),contains(2,2,5,5));
     }
 
+    @Test
+    public void chekOutputForNumber510(){
+        
+        assertThat(MultiplierDivider.getMultipliersForNumber(2*3*5*7*11),contains(2,3,5,7,11));
+    }
+
+    @Test
+    public void chekOutputForNumber111(){
+
+        assertThat(MultiplierDivider.getMultipliersForNumber(111),contains(3,37));
+    }
 
 
 }
