@@ -16,18 +16,22 @@ public class MultiplierDivider {
             result.add(number);
         }
 
-        if(checkIfTheNumberIsPime(number)){
+        else if(checkIfTheNumberIsPime(number)){
             result.add(number);
         }
 
-        if(number%Math.sqrt(number)==0){
+        else if(number%Math.sqrt(number)==0){
             result.add((int)Math.sqrt(number));
             result.add((int)Math.sqrt(number));
         }
-        
 
-      //  if(number%2==0 || number%3==0 ||number%5==0 ||number%7==0 || number%9==0){}
+        else if(number%2==0){
+            int numberToAddToResult =number;
+            do {
+                result.add(numberToAddToResult%2);
 
+            }while (checkIfTheNumberIsPime(numberToAddToResult));
+        }
 
         return result;
 

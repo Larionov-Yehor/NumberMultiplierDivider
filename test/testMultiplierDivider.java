@@ -68,6 +68,18 @@ public class testMultiplierDivider {
         assertThat(actual,equalTo(expected));
     }
 
+    @Test
+    public void chekOutputForNumber121(){
+
+        List<Integer> actual = MultiplierDivider.getMultipliersForNumber(121);
+
+        List<Integer> expected = new ArrayList<>();
+        expected.add(11);
+        expected.add(11);
+
+        assertThat(actual,equalTo(expected));
+    }
+
 
 
 }
