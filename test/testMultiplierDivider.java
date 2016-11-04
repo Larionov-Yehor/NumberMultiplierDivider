@@ -45,20 +45,7 @@ public class testMultiplierDivider {
         assertThat(actual,equalTo(expected));
     }
 
-    
-
-  /*  @Test
-    public void chekOutputForNumberFive(){
-
-        List<Integer> actual = MultiplierDivider.getMultipliersForNumber(5);
-
-        List<Integer> expected = new ArrayList<>();
-        expected.add(5);
-
-        assertThat(actual,equalTo(expected));
-    }*/
-
-    /*@Test
+        @Test
     public void chekOutputForNumberFour(){
         List<Integer> actual = MultiplierDivider.getMultipliersForNumber(4);
 
@@ -68,6 +55,19 @@ public class testMultiplierDivider {
 
         assertThat(actual,equalTo(expected));
     }
-*/
+
+
+   @Test
+    public void chekOutputForNumberFive(){
+
+        List<Integer> actual = MultiplierDivider.getMultipliersForNumber(5);
+
+        List<Integer> expected = new ArrayList<>();
+        expected.add(5);
+
+        assertThat(actual,equalTo(expected));
+    }
+
+
 
 }

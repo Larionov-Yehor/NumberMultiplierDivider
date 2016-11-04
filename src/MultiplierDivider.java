@@ -7,34 +7,38 @@ import java.util.List;
 
 public class MultiplierDivider {
 
-    public static List<Integer> getMultipliersForNumber (int number){
+    public static List<Integer> getMultipliersForNumber(int number) {
 
         List<Integer> result = new ArrayList<>();
 
-       if(number==1 || number==2 || number==3){
 
+        if (number == 1 ) {
+            result.add(number);
+        }
+
+
+        if(checkIfTheNumberIsPime(number)){
             result.add(number);
         }
 
 
 
+        return result;
+    }
 
-       /* for (int i=2; i<number;i++){
-            if (number%i==0){
-                result.add(number);
+
+    public static boolean checkIfTheNumberIsPime(int number) {
+
+            int i;
+
+            for (i = 2; i <= number/2; i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+
             }
-        }
-*/
 
-
-
-       /* if(number%2==0){
-            do{
-                int numberToAddIntoResult =number/2;
-                result.add(numberToAddIntoResult);
-            } while();
-        }*/
-
-    return result;}
+        return true;
+    }
 
 }
